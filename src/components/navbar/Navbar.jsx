@@ -6,6 +6,7 @@ function Navbar() {
     <header>
       <div className="navbar-item">
         <h1>header</h1>
+        <p>116</p>
       </div>
     </header>
   );
