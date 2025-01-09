@@ -1,5 +1,102 @@
 .sidebar {
   width: 306px;
   height: 100%;
-  border: 1px solid #000;
+  border-radius: 25px;
+  padding: 75px 25px;
+  box-shadow: 0 0 10px #c3c3c3;
+}
+
+.sidebar .sidebar-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  img {
+    width: 205px;
+    height: 75px;
+  }
+}
+
+.sidebar .sidebar-profil {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.sidebar .sidebar-profil .sprofil-left {
+  width: 58px;
+  height: 58px;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+}
+
+.sidebar .sidebar-profil .sprofil-right {
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    font-family: "Poppins", sans-serif;
+    color: #5f5c5c;
+  }
+}
+
+.sidebar .sidebar-links-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  gap: 10px;
+}
+
+.sidebar .sidebar-links-container .slink-item {
+  width: 100%;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #f7f7f7;
+  padding: 20px 30px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+
+  svg {
+    width: 29.5px;
+    height: 29.5px;
+  }
+  p {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 27px;
+    color: #52555a;
+  }
+}
+
+.sidebar .sidebar-links-container .slink-item:hover {
+  color: #ef4136;
+  background-color: #facac7;
+  p {
+    color: inherit;
+  }
+}
+
+.sidebar .sidebar-links-container a.active {
+  color: #ef4136;
+  background-color: #facac7;
+  p {
+    color: inherit;
+  }
 }
