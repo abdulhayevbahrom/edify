@@ -3,10 +3,14 @@
   height: 100vh;
   padding: 15px;
   display: flex;
-  gap: 15px;
+  gap: 25px;
+}
+
+.admin-right {
+  width: calc(100% - 306px);
+  border: 1px solid red;
 }
 
 .admin_content {
-  width: calc(100% - 306px);
-  border: 1px solid red;
+  width: 100%;
 }
