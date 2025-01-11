@@ -13,7 +13,7 @@ function Sidebar() {
   const sidebarLinks = [
     {
       linkName: "Boshqaruv",
-      link: "/dashoard",
+      link: "/admin/dashboard",
       icon: dashboardIcon,
     },
     {
