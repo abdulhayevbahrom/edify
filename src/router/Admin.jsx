@@ -3,6 +3,7 @@ import "./Admin.css";
 import Sidebar from "../components/sidebar/Sidebar";
 import Navbar from "../components/navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
+import Teacher from "../components/Students/Teacher";
 
 function Admin() {
   return (
@@ -13,6 +14,7 @@ function Admin() {
         <div className="admin_content">
           <Routes>
             <Route path="/payments" />
+            <Route path="/teachers" element={<Teacher/>}/>
           </Routes>
         </div>
       </div>
