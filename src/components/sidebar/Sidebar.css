@@ -1,6 +1,7 @@
 .sidebar {
   width: 306px;
-  height: 1020px;
+  /* height: 1020px; */
+  height: 100%;
   border-radius: 25px;
   padding: 75px 25px;
   box-shadow: 0 0 10px #c3c3c3;
