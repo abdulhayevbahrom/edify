@@ -7,6 +7,8 @@ import serachIcon from "../../assets/navbar/search.svg";
 import PickerData from "../antd/DataPicker";
 
 function Navbar() {
+  console.log("ok");
+  
   return (
     <header>
       <div className="navbar-item">
