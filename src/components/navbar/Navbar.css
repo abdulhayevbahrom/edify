@@ -11,10 +11,10 @@ header {
 
 header .navbar-item {
   width: 20%;
+  gap: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 0 50px; */
   &:nth-child(2) {
     border-left: 1px solid #d0c4c4;
     border-right: 1px solid #d0c4c4;
@@ -40,4 +40,18 @@ header .searchbox {
     width: 31px;
     height: 31px;
   }
+}
+
+.navbar-item .nav-item_right h4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.navbar-item .nav-item_right span {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 5px;
+  color: #ef4136;
 }

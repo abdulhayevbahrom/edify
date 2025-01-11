@@ -27,3 +27,13 @@ body {
   max-width: 1920px;
   margin: 0 auto;
 }
+
+:root {
+  --main-color: #ef4136;
+  --light-pink: #facac7;
+  --light-gray: #f7f7f7;
+  --main-dark: #52555a;
+  --main-gray: #776e6e;
+  --light-green: #0ca409;
+  --rare-yellow: #fbc60a;
+}

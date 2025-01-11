@@ -8,32 +8,32 @@ import PickerData from "../antd/DataPicker";
 
 function Navbar() {
   console.log("ok");
-  
+
   return (
     <header>
       <div className="navbar-item">
-        <div className="nitem_left">
+        <div className="nav-item_left">
           <img src={studentsIcon} alt="" />
         </div>
-        <div className="nitem_right">
+        <div className="nav-item_right">
           <h4>O’quvchilar soni</h4>
           <span>{116}ta</span>
         </div>
       </div>
       <div className="navbar-item">
-        <div className="nitem_left">
+        <div className="nav-item_left">
           <img src={groupsIcon} alt="" />
         </div>
-        <div className="nitem_right">
+        <div className="nav-item_right">
           <h4>O’quvchilar soni</h4>
           <span>{116}ta</span>
         </div>
       </div>
       <div className="navbar-item">
-        <div className="nitem_left">
+        <div className="nav-item_left">
           <img src={paymentIcon} alt="" />
         </div>
-        <div className="nitem_right">
+        <div className="nav-item_right">
           <h4>O’quvchilar soni</h4>
           <span>{116}ta</span>
         </div>
