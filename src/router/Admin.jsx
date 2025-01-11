@@ -2,6 +2,7 @@ import React from "react";
 import "./Admin.css";
 import Sidebar from "../components/sidebar/Sidebar";
 import Navbar from "../components/navbar/Navbar";
+import Payments from "../router/payment/Payment"
 import { Route, Routes } from "react-router-dom";
 
 function Admin() {
@@ -12,7 +13,7 @@ function Admin() {
         <Navbar />
         <div className="admin_content">
           <Routes>
-            <Route path="/payments" />
+            <Route path="/payments" element={<Payments />} />
           </Routes>
         </div>
       </div>
