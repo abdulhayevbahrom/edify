@@ -4,6 +4,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Navbar from "../components/navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "../components/dashboard/Dashboard";
+import Teacher from "../components/Students/Teacher";
 
 function Admin() {
   return (
@@ -15,6 +16,7 @@ function Admin() {
           <Routes>
             <Route path="/payments" />
             <Route path="/admin/dashboard" element={<Dashboard />} />
+            <Route path="/teachers" element={<Teacher />} />
           </Routes>
         </div>
       </div>
