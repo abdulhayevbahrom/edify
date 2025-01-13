@@ -47,7 +47,7 @@ function AddTeacher() {
           <input type="text" />
         </div>
         <div className="input">
-          <label>O’qituvchi foydalanuchi nomi </label>
+          <label>O’qituvchi paroli </label>
           <input type="text" />
         </div>
         <div className="input">

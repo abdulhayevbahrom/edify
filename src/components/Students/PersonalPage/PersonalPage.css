@@ -1,0 +1,138 @@
+.personal {
+    width: 100%;
+    height: 672px;
+    background-color: red;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px #c3c3c3;
+
+    .personaldata {
+        width: 32%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .photo_logo {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, rgba(179, 179, 179, 0.62) 0%, rgba(0, 0, 0, 0.62) 100%);
+
+        }
+
+        h1 {
+            width: 303px;
+            height: 96px;
+        }
+
+        p {
+            width: 330px;
+            height: 45px;
+            font-family: Poppins;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 45px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            font-family: Poppins;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 45px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+            span {
+                font-family: Poppins;
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 45px;
+                text-align: left;
+                color: rgba(12, 164, 9, 1);
+                font-family: Poppins;
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 45px;
+                text-align: left;
+            }
+
+            .z {
+                font-family: Poppins;
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 45px;
+                text-align: left;
+                color: rgba(239, 65, 54, 1);
+                font-family: Poppins;
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 45px;
+                text-align: left;
+            }
+
+        }
+
+    }
+
+    .extradata {
+        width: 35%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding-top: 70px;
+
+        p {
+            width: 535px;
+            height: 33px;
+            top: 415px;
+            left: 928px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: rgba(0, 0, 0, 1);
+
+            span {
+                color: red;
+            }
+        }
+
+    }
+
+    .sertificate {
+        width: 33.3%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .img_corp {
+            width: 375px;
+            height: 531px;
+            background-image: url(https://s3-alpha-sig.figma.com/img/a614/2b71/96a9af69ab49283f922bbb5f4c63e8cd?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DG2Ph1XQKCgCrXM50QAovdMESVALuVf1N0LMAtQ9SN5nH07mwajkA9qffSkrUQeaMabevs9GD4mAr6jpyBIseR6u3oq2tA4WM3iG4jkHK2xIYdg7ywymL2DTJfu8I1Q89qY2hkR8opQP5gR-B6i7Cs2zABKyMSQZkHGtdedG-eKGQHgGZi-U-CXnOALqspp0ZqX3ebFiBsbN~A0fIf2k18XEUTc1BhIxZe1Wn5zFoAGbjn2ERCwOB9EvIR0mekz~QUHbg8HDEf1CsB6XfNy~oQz9i6Z4VSbWhA3i~JuctAN40M50n-1~0hFXB7~p~4MVasFyW00sAE0q4Rtgj7xVcQ__);
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; */
+        }
+    }
+}
