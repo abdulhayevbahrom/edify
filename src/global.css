@@ -20,6 +20,8 @@ input {
 button {
   border: none;
   outline: none;
+  cursor: pointer;
+
 }
 
 body {
@@ -33,6 +35,7 @@ body {
   --light-pink: #facac7;
   --light-gray: #f7f7f7;
   --main-dark: #52555a;
+  --text-black: #313131;
   --main-gray: #776e6e;
   --light-green: #0ca409;
   --rare-yellow: #fbc60a;

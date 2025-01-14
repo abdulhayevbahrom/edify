@@ -1,0 +1,93 @@
+.ListTeacher{
+    width: 100%;
+}
+
+.ListTeacher_box{
+    width: 100%;
+    padding: 25px 25px;
+    border-radius: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0px 0px 8px 3px var(--light-gray);
+    flex-wrap: wrap;
+}
+
+.ListTeacher_item{
+    width: 334px;
+    padding: 20px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    color: var(--main-dark);
+    box-shadow: 0px 0px 5px 1px #999;
+}
+
+.ListTeacher_item h1{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-left: 75px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #C4C4C4 0%, #4A4949 100%);
+    color: var(--light-gray);
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.ListTeacher_item .ListTeacher_science{
+    font-size: 19px;
+    font-weight: 550;
+    text-align: center;
+}
+
+.ListTeacher_name{
+    font-size: 24px;
+    font-weight: 550;   
+    color: var(--text-black); 
+}
+
+.ListTeacher_money, .ListTeacher_group{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.ListTeacher_money p{
+    font-size: 18px;
+    font-weight: 550;
+    text-align: center;
+    color: var(--text-black);
+}
+
+.ListTeacher_item  img{
+    width: 33px;
+}
+
+.ListTeacher_group p{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.ListTeacher_group span{
+    color: var(--text-black);
+}
+
+
+.ListTeacher_item button{
+    width: 170px;
+    padding: 10px 0px;
+    border-radius: 15px;
+    font-size: 18px;
+    margin-left: 75px;
+    margin-top: 10px;
+    color: var(--text-black); 
+    font-weight: 550;
+    /* color: var(--text-black); */
+}

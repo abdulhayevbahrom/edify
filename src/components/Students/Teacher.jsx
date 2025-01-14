@@ -2,6 +2,7 @@ import React from "react";
 import "./Teacher.css";
 import { Tabs } from "antd";
 import AddTeacher from "./addTeacher/AddTeacher";
+import ListTeacher from "./listTeacher/ListTeacher";
 
 function Teacher() {
   return (
@@ -18,7 +19,7 @@ function Teacher() {
           <h1>Shaxsiy malumotlar</h1>
         </Tabs.TabPane>
         <Tabs.TabPane tab="O'qituvchilar ro'yhati" key="4">
-          <h1>O'qituvchilar ro'yhati</h1>
+          <ListTeacher />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Xabarlar" key="5">
           <h1>Xabarlar</h1>
