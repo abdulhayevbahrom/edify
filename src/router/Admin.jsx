@@ -15,7 +15,7 @@ function Admin() {
         <Navbar />
         <div className="admin_content">
           <Routes>
-            <Route path="/admin/dashboard" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
             <Route path="/teachers" element={<Teacher />} />
             <Route path="/payments" element={<Payments />} />
           </Routes>
