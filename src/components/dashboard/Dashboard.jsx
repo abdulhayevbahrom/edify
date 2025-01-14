@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Dashboard.css";
 import ReactApexChart from "react-apexcharts";
 import { Link } from "react-router-dom";
 import { Button, Tooltip } from "antd";
 import { IoInformationCircleOutline } from "react-icons/io5";
+import { Chart } from "chart.js/auto";
 
 function Dashboard() {
-  const [state, setState] = React.useState({
+  const [chartData, setChartData] = useState({
     series: [
       {
         name: "To'lovlar soni",
@@ -22,6 +23,7 @@ function Dashboard() {
         height: 350,
         type: "area",
       },
+      colors: ["#FFD700", "#FF0000"],
       dataLabels: {
         enabled: false,
       },
@@ -48,6 +50,43 @@ function Dashboard() {
     },
   });
 
+  const chartRef = useRef(null); // Chart uchun canvas yaratish
+
+  useEffect(() => {
+    const ctx = chartRef.current.getContext("2d"); // Canvas konteksti
+
+    // Ma'lumotlarni aniqlash
+    const data = {
+      labels: ["Kelganlar", "Kelmaganlar"],
+      datasets: [
+        {
+          label: "My First Dataset",
+          data: [300, 50],
+          backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
+          hoverOffset: 4,
+        },
+      ],
+    };
+
+    // Chart.js obyektini yaratish
+    const doughnutChart = new Chart(ctx, {
+      type: "doughnut", // Chart turi
+      data: data, // Chart ma'lumotlari
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    });
+
+    // Componentdan chiqqanda chartni tozalash
+    return () => {
+      doughnutChart.destroy();
+    };
+  }, []);
+
   return (
     <div className="dashboard">
       <h1>Boshqaruv</h1>
@@ -55,6 +94,8 @@ function Dashboard() {
         <div className="students-flow">
           <div className="desc-flow-students">
             <h2 className="statistics-title">O’quvchilar oqimi</h2>
+            {/* chart.js  chart */}
+            <canvas ref={chartRef}></canvas> {/* Canvas elementi */}
           </div>
         </div>
         <div className="pay-and-payments">
@@ -63,8 +104,8 @@ function Dashboard() {
           </div>
           <ReactApexChart
             className="apexChart"
-            series={state.series}
-            options={state.options}
+            series={chartData.series}
+            options={chartData.options}
             type="area"
             height={350}
           />

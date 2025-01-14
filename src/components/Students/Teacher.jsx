@@ -2,11 +2,8 @@ import React from "react";
 import "./Teacher.css";
 import { Tabs } from "antd";
 import AddTeacher from "./addTeacher/AddTeacher";
-<<<<<<< HEAD
 import PersonalPage from "./PersonalPage/PersonalPage";
-=======
 import ListTeacher from "./listTeacher/ListTeacher";
->>>>>>> origin/asqarjon
 
 function Teacher() {
   return (
@@ -20,13 +17,13 @@ function Teacher() {
           <h1>Guruhlar</h1>
         </Tabs.TabPane>
         <Tabs.TabPane tab="Shaxsiy malumotlar" key="3">
-          <PersonalPage/> 
+          <PersonalPage />
         </Tabs.TabPane>
         <Tabs.TabPane tab="O'qituvchilar ro'yhati" key="4">
           <ListTeacher />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Xabarlar" key="5">
-          <h1>Xabarlar</h1>     
+          <h1>Xabarlar</h1>
         </Tabs.TabPane>
       </Tabs>
     </div>
