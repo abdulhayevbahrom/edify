@@ -16,7 +16,7 @@ function Teacher() {
           <h1>Guruhlar</h1>
         </Tabs.TabPane>
         <Tabs.TabPane tab="Shaxsiy malumotlar" key="3">
-          <PersonalPage/>
+          <PersonalPage/> 
         </Tabs.TabPane>
         <Tabs.TabPane tab="O'qituvchilar ro'yhati" key="4">
           <h1>O'qituvchilar ro'yhati</h1>

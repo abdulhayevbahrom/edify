@@ -19,12 +19,12 @@ function PersonalPage() {
                 <p><span><FaLocationDot /></span>  20-uy, Bo’lon, Chortoq,  Namangan viloyati</p>
                 <p><span>< FaPhoneAlt/></span> +998999787525, +998999787526</p>
                 <p><span>< BsPercent/></span>  40%</p>
-                <p><span><PiMedal/></span> Dasturiy muhandis</p>
-                <p><span>@</span>  john_doe</p>
-            </div>
+                <p><span><PiMedal/></span> Dasturiy muhandis</p> 
+                <p><span>@</span>  john_doe</p> 
+            </div> 
             <div className="sertificate">
-                <div className="img_corp">
-                        
+                <div className="img_corp">    
+                    
                 </div>            
             </div>
         </div>
