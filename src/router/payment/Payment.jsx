@@ -49,36 +49,72 @@ function Payment() {
       </div>
 
       <div className="payment_list">
-        <div className="payment_container">
-          <div className="payment_list_box">
-            <p>O'quvchini ismi</p>
-            <p>To'lov summasi</p>
-            <p>To'lov sanasi</p>
-            <p>Qaysi oyligi</p>
-            <p>Shartnoma sanasi</p>
-          </div>
-        </div>
-        <div className="payment_list_detail">
-          <div className="payment_list_detail_box">
-            <p>John doe Lemon</p>
-            <p>100.000 so'm</p>
-            <p>18/02/2024</p>
-            <p>Dekabr</p>
-            <p>
-              17/09/2022
-              <Tooltip
-                title="Batafsil"
-                placement="bottom"
-                color="#52555A"
-                trigger="hover"
+      <table>
+        <thead>
+            <tr>
+                <th>O'quvchi ismi</th>
+                <th>To'lov summasi</th>
+                <th>To'lov sanasi</th>
+                <th>Qaysi oyligi</th>
+                <th>shartnoma sanasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Olimo hasan</td>
+                <td>500,000 so'm</td>
+                <td>2025-01-10</td>
+                <td>Yanvar</td>
+                <td>2024-12-20</td>
+                <Tooltip
+              title="Batafsil"
+              placement="bottom"
+              color="#52555A"
+              trigger="hover"
               >
-                <Button>
-                  <PiInfoBold />
-                </Button>
-              </Tooltip>
-            </p>
-          </div>
-        </div>
+              <Button>
+                <PiInfoBold />
+              </Button>
+            </Tooltip>
+            </tr>
+            <tr>
+                <td>Karimova Madina</td>
+                <td>700,000 so'm</td>
+                <td>2025-01-11</td>
+                <td>Yanvar</td>
+                <td>2024-12-20</td>
+                <Tooltip
+              title="Batafsil"
+              placement="bottom"
+              color="#52555A"
+              trigger="hover"
+              >
+              <Button>
+                <PiInfoBold />
+              </Button>
+            </Tooltip>
+            </tr>
+            <tr>
+                <td>Yusupov Anvar</td>
+                <td>600,000 so'm</td>
+                <td>2025-01-12</td>
+                <td>Yanvar</td>
+                <td>2024-12-20</td>
+            <Tooltip
+              title="Batafsil"
+              placement="bottom"
+              color="#52555A"
+              trigger="hover"
+              >
+              <Button>
+                <PiInfoBold />
+              </Button>
+            </Tooltip>
+              </tr>
+          </tbody>
+      </table>          
+          
+        
       </div>
     </div>
   );
