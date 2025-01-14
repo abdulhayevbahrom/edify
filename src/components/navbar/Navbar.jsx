@@ -25,7 +25,7 @@ function Navbar() {
           <img src={groupsIcon} alt="" />
         </div>
         <div className="nav-item_right">
-          <h4>O’quvchilar soni</h4>
+          <h4>Guruhilar soni</h4>
           <span>{116}ta</span>
         </div>
       </div>
@@ -34,7 +34,7 @@ function Navbar() {
           <img src={paymentIcon} alt="" />
         </div>
         <div className="nav-item_right">
-          <h4>O’quvchilar soni</h4>
+          <h4>To’lov qilmaganlar soni</h4>
           <span>{116}ta</span>
         </div>
       </div>
