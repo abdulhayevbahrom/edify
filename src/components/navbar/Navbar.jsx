@@ -17,7 +17,11 @@ function Navbar() {
         </div>
         <div className="nav-item_right">
           <h4>O’quvchilar soni</h4>
-          <span>{116}ta</span>
+          <p>
+            {116}
+
+            <span>ta</span>
+          </p>
         </div>
       </div>
       <div className="navbar-item">
@@ -26,7 +30,11 @@ function Navbar() {
         </div>
         <div className="nav-item_right">
           <h4>Guruhilar soni</h4>
-          <span>{116}ta</span>
+          <p>
+            {116}
+
+            <span>ta</span>
+          </p>
         </div>
       </div>
       <div className="navbar-item">
@@ -35,7 +43,11 @@ function Navbar() {
         </div>
         <div className="nav-item_right">
           <h4>To’lov qilmaganlar soni</h4>
-          <span>{116}ta</span>
+          <p>
+            {116}
+
+            <span>ta</span>
+          </p>
         </div>
       </div>
       <div className="picer-data-antd">

@@ -8,7 +8,6 @@
 
 .admin-right {
   width: calc(100% - 306px);
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   gap: 4px;

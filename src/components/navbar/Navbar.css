@@ -1,13 +1,19 @@
 header {
   width: 100%;
-  /* min-height: 120px; */
-  height: 120px;
+  min-height: 120px;
+  max-height: 120px;
+  height: 100%;
   border-radius: 25px;
   box-shadow: var(--box-shadow);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding: 0 30px;
+  position: sticky;
+  top: 10px;
+  left: 0;
+  background-color: #fff;
+  z-index: 10000;
 }
 
 header .navbar-item {
@@ -49,10 +55,14 @@ header .searchbox {
   line-height: 27px;
 }
 
-.navbar-item .nav-item_right span {
+.navbar-item .nav-item_right p {
   font-size: 30px;
   font-weight: 500;
   line-height: 45px;
   letter-spacing: 5px;
   color: #ef4136;
+
+  span {
+    font-size: 20px;
+  }
 }

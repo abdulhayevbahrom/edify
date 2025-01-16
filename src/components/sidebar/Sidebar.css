@@ -71,10 +71,10 @@
   padding: 20px 30px;
   border-radius: 14px;
   transition: all 0.3s ease;
-
-  svg {
-    width: 29.5px;
-    height: 29.5px;
+  span {
+    svg {
+      font-size: 30px;
+    }
   }
   p {
     font-size: 18px;

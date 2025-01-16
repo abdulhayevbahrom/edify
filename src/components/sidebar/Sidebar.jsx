@@ -1,51 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/main/logo.svg";
-import dashboardIcon from "../../assets/sidebar/dashboard.svg";
-import paymentIcon from "../../assets/sidebar/payments.svg";
-import teachersIcons from "../../assets/sidebar/teachers.svg";
-import indexIcon from "../../assets/sidebar/classIndex.svg";
-import attendenceIcon from "../../assets/sidebar/attendence.svg";
-import settingsIcon from "../../assets/sidebar/settings.svg";
+import { BsGrid } from "react-icons/bs";
+import { AiOutlineDollarCircle } from "react-icons/ai";
+import { LiaGraduationCapSolid } from "react-icons/lia";
+import { PiGridNine, PiGridNineFill } from "react-icons/pi";
+import { LuSettings } from "react-icons/lu";
 
 function Sidebar() {
+  const [changeLogo, setChangeLogo] = useState(false);
   const sidebarLinks = [
     {
       linkName: "Boshqaruv",
       link: "/",
-      icon: dashboardIcon,
+      icon: <BsGrid />,
     },
     {
       linkName: "To'lovlar",
       link: "/payments",
-      icon: paymentIcon,
+      icon: <AiOutlineDollarCircle />,
     },
     {
       linkName: "O'qituvchilar",
       link: "/teachers",
-      icon: teachersIcons,
+      icon: <LiaGraduationCapSolid />,
     },
     {
       linkName: "Dars jadvali",
       link: "/class-index",
-      icon: indexIcon,
+      icon: <PiGridNine />,
     },
     {
       linkName: "Davomat",
       link: "/attendance",
-      icon: attendenceIcon,
+      icon: <PiGridNineFill />,
     },
     {
       linkName: "Settings",
       link: "/settings",
-      icon: settingsIcon,
+      icon: <LuSettings />,
     },
   ];
   return (
     <div className="sidebar">
       <Link className="sidebar-logo" to="/">
-        <img src={logo} alt="" />
+        {changeLogo ? <img src={logo} alt="" /> : <img src={logo} alt="" />}
       </Link>
       <div className="sidebar-profil">
         <div className="sprofil-left">
@@ -59,7 +59,7 @@ function Sidebar() {
       <div className="sidebar-links-container">
         {sidebarLinks?.map((link, index) => (
           <NavLink to={link.link} className="slink-item" key={index}>
-            <img src={link.icon} alt="" />
+            <span>{link.icon}</span>
             <p>{link.linkName}</p>
           </NavLink>
         ))}

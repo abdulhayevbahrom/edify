@@ -23,7 +23,7 @@ function Dashboard() {
         height: 350,
         type: "area",
       },
-      colors: ["#FFD700", "#FF0000"],
+      colors: ["#0968C0", "#EC3D33"],
       dataLabels: {
         enabled: false,
       },
@@ -44,7 +44,7 @@ function Dashboard() {
       },
       tooltip: {
         x: {
-          format: "dd/MM/yy HH:mm",
+          format: "dd/MM/yy",
         },
       },
     },
@@ -60,9 +60,9 @@ function Dashboard() {
       labels: ["Kelganlar", "Kelmaganlar"],
       datasets: [
         {
-          label: "My First Dataset",
+          label: "kelganlar, kelmaganlar",
           data: [300, 50],
-          backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
+          backgroundColor: ["rgba(250, 202, 199, 1)", "#EF4136"],
           hoverOffset: 4,
         },
       ],
@@ -94,8 +94,24 @@ function Dashboard() {
         <div className="students-flow">
           <div className="desc-flow-students">
             <h2 className="statistics-title">O’quvchilar oqimi</h2>
+          </div>
+          <div className="donut-chart">
             {/* chart.js  chart */}
             <canvas ref={chartRef}></canvas> {/* Canvas elementi */}
+          </div>
+          <div className="index-flow-in-number">
+            <div className="box-container">
+              <div className="red-ind-box"></div>
+              <span>Kelmaganlar</span>
+            </div>
+            <p>{66}ta</p>
+          </div>
+          <div className="index-flow-in-number">
+            <div className="box-container">
+              <div className="red-ind-box"></div>
+              <span>Kelganlar</span>
+            </div>
+            <p>{129}ta</p>
           </div>
         </div>
         <div className="pay-and-payments">
@@ -176,7 +192,7 @@ function Dashboard() {
               <td>{116} ta</td>
               <td>
                 {16} ta
-                <Link>
+                <Link to={"/"}>
                   <Tooltip
                     title="Batafsil"
                     placement="bottom"
@@ -197,7 +213,7 @@ function Dashboard() {
               <td>{116} ta</td>
               <td>
                 {16} ta
-                <Link>
+                <Link to={"/"}>
                   <Tooltip
                     title="Batafsil"
                     placement="bottom"
@@ -210,7 +226,7 @@ function Dashboard() {
                   </Tooltip>
                 </Link>
               </td>
-            </tr>{" "}
+            </tr>
             <tr>
               <td>John Doe Lemoni</td>
               <td>{12000000} so'm</td>
@@ -218,7 +234,7 @@ function Dashboard() {
               <td>{116} ta</td>
               <td>
                 {16} ta
-                <Link>
+                <Link to={"/"}>
                   <Tooltip
                     title="Batafsil"
                     placement="bottom"
@@ -231,7 +247,7 @@ function Dashboard() {
                   </Tooltip>
                 </Link>
               </td>
-            </tr>{" "}
+            </tr>
             <tr>
               <td>John Doe Lemoni</td>
               <td>{12000000} so'm</td>
@@ -239,28 +255,7 @@ function Dashboard() {
               <td>{116} ta</td>
               <td>
                 {16} ta
-                <Link>
-                  <Tooltip
-                    title="Batafsil"
-                    placement="bottom"
-                    color="#52555A"
-                    trigger="hover"
-                  >
-                    <Button>
-                      <IoInformationCircleOutline />
-                    </Button>
-                  </Tooltip>
-                </Link>
-              </td>
-            </tr>{" "}
-            <tr>
-              <td>John Doe Lemoni</td>
-              <td>{12000000} so'm</td>
-              <td>{10} ta</td>
-              <td>{116} ta</td>
-              <td>
-                {16} ta
-                <Link>
+                <Link to={"/"}>
                   <Tooltip
                     title="Batafsil"
                     placement="bottom"

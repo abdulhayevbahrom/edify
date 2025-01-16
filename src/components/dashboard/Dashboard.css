@@ -29,9 +29,38 @@
 .dashboard .students-flow {
   width: 308px;
   height: 100%;
-  padding: 25px;
+  padding: 30px;
   border-radius: 24px;
   box-shadow: var(--box-shadow);
+
+  .donut-chart {
+    margin-bottom: 30px;
+  }
+
+  .index-flow-in-number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0;
+
+    .box-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .red-ind-box {
+        width: 11px;
+        height: 11px;
+        background-color: var(--main-color);
+        border-radius: 3px;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #717579;
+      }
+    }
+  }
 }
 
 .dashboard .pay-and-payments {
@@ -105,12 +134,13 @@
 
 .teachers-info-index {
   width: 100%;
-  background: dodgerblue;
 }
 
 .dashboard table {
   width: 100%;
   border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 20px;
   thead {
     tr {
       th {
@@ -130,20 +160,55 @@
 
   tbody {
     tr {
+      border-radius: 10px;
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0px 0px 8px 3px #0000000f;
       td {
-        padding: 10px 20px;
+        padding: 23.5px 20px;
         text-align: left;
+        border: none;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        color: var(--light-green);
 
         &:first-child {
           width: 30%;
           padding-left: 35px;
+          border-top-left-radius: 14px;
+          border-bottom-left-radius: 14px;
+          color: #000;
         }
 
         &:nth-child(5) {
+          border-top-right-radius: 14px;
+          border-bottom-right-radius: 14px;
+          text-align: justify;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 10px 30px;
+
+          a {
+            :where(
+                .css-dev-only-do-not-override-7ny38l
+              ).ant-btn-variant-outlined,
+            :where(
+                .css-dev-only-do-not-override-7ny38l
+              ).ant-btn-variant-dashed {
+              all: unset;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              svg {
+                width: 24px;
+                height: 24px;
+                fill: var(--tooltip-hover);
+                color: var(--tooltip-hover);
+              }
+            }
+          }
         }
       }
     }
