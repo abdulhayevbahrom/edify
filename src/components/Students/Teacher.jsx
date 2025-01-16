@@ -28,6 +28,6 @@ function Teacher() {
       </Tabs>
     </div>
   );
-}
+} 
 
 export default Teacher;
