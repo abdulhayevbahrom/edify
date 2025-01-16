@@ -6,6 +6,8 @@ import { BsPercent } from 'react-icons/bs'
 import { PiMedal } from 'react-icons/pi'
 
 function PersonalPage() {
+    console.log("ok");
+    
     return (
         <div className='personal'>
             <div className="personaldata">
