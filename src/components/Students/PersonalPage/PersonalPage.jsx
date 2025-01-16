@@ -24,7 +24,7 @@ function PersonalPage() {
             </div> 
             <div className="sertificate">
                 <div className="img_corp">    
-                    
+                      
                 </div>            
             </div>
         </div>
