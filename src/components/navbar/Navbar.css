@@ -66,3 +66,41 @@ header .searchbox {
     font-size: 20px;
   }
 }
+
+header.input-active .navbar-item,
+header.input-active .picer-data-antd {
+  display: none;
+}
+header .searchbox {
+  width: 51px;
+  height: 51px;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header.input-active .searchbox {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  justify-content: center;
+  padding: 0;
+}
+
+header.input-active .searchbox img {
+  display: none;
+}
+
+header .search-input {
+  width: 100%;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 22px;
+}
