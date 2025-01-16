@@ -44,10 +44,7 @@ function ListTeacher() {
             <p>Guruhlari: <span>11ta</span></p>
           </div>
           <button>Batafsil</button>
-        </div> 
-
-
-        
+        </div>       
       </div>
     </div>
   );

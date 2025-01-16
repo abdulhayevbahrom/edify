@@ -1,9 +1,9 @@
 .payment {
   width: 100%;
-  display: flex;
+  /* display: flex;
   gap: 20px;
   flex-direction: column;
-  align-items: start;
+  align-items: start; */
 }
 
 .payment .payment_title h1 {
@@ -155,11 +155,8 @@
   font-weight: 600;
 }
 
-.payment_list {
-  width: 100%;
-  padding: 10px;
-}
 
+/* 
 .payment_list table{
   width: 100%;
  
@@ -178,7 +175,6 @@
   padding: 10px 30px;
   border-radius: 15px;
   font-size: 19px;
-  font-weight: 550;  /* box-shadow: 0px 0px 8px 3px #0000000F; */
 }
 
 .payment_list tbody td:nth-child(1){
@@ -203,4 +199,55 @@
 
 
 
+ */
 
+ .payment_list{
+  width: 100%;
+  margin-top: 20px;
+
+ }
+
+ .payment table {
+  width: 100%;
+  border-collapse: collapse;
+  thead {
+    tr {
+      th {
+        border-bottom: 2px solid #c4c4c459;
+        padding: 10px 20px 25px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: left;
+
+        &:first-child {
+          padding-left: 35px;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      /* margin-top: 70px; */
+      border-radius: 15px;
+      box-shadow: 0 0 5px 4px #dddddd;
+      td {
+        padding: 10px 20px;
+        text-align: left;
+
+        &:first-child {
+          width: 30%;
+          padding-left: 35px;
+        }
+
+        &:nth-child(5) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+}

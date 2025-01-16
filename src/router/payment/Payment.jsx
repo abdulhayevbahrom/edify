@@ -65,7 +65,8 @@ function Payment() {
                 <td>500,000 so'm</td>
                 <td>2025-01-10</td>
                 <td>Yanvar</td>
-                <td>2024-12-20</td>
+                <td>2024-12-20
+                <Link>
                 <Tooltip
               title="Batafsil"
               placement="bottom"
@@ -76,13 +77,16 @@ function Payment() {
                 <PiInfoBold />
               </Button>
             </Tooltip>
+              </Link>
+              </td>
             </tr>
             <tr>
                 <td>Karimova Madina</td>
                 <td>700,000 so'm</td>
                 <td>2025-01-11</td>
                 <td>Yanvar</td>
-                <td>2024-12-20</td>
+                <td>2024-12-20
+                  <Link>
                 <Tooltip
               title="Batafsil"
               placement="bottom"
@@ -93,13 +97,16 @@ function Payment() {
                 <PiInfoBold />
               </Button>
             </Tooltip>
+                </Link>
+              </td>
             </tr>
             <tr>
                 <td>Yusupov Anvar</td>
                 <td>600,000 so'm</td>
                 <td>2025-01-12</td>
                 <td>Yanvar</td>
-                <td>2024-12-20</td>
+                <td>2024-12-20
+                  <Link>
             <Tooltip
               title="Batafsil"
               placement="bottom"
@@ -110,6 +117,8 @@ function Payment() {
                 <PiInfoBold />
               </Button>
             </Tooltip>
+                </Link> 
+              </td>
               </tr>
           </tbody>
       </table>          
