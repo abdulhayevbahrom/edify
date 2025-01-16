@@ -5,9 +5,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 20px 30px;
-  position: relative;
-  transition: all 0.3s ease;
+  padding: 0 30px;
+  position: sticky;
+  top: 10px;
+  left: 0;
+  background-color: #fff;
+  z-index: 100;
 }
 
 header .navbar-item {
@@ -18,9 +21,25 @@ header .navbar-item {
   justify-content: center;
 }
 
-header .navbar-item:nth-child(2) {
-  border-left: 1px solid #d0c4c4;
-  border-right: 1px solid #d0c4c4;
+header .picer-data-antd {
+  width: 15%;
+  height: 61px;
+}
+
+header .searchbox {
+  width: 61px;
+  height: 61px;
+  background-color: var(--light-gray);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  img {
+    width: 31px;
+    height: 31px;
+  }
 }
 
 .navbar-item .nav-item_right h4 {
