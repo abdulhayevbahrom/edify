@@ -13,7 +13,7 @@ header {
   top: 10px;
   left: 0;
   background-color: #fff;
-  z-index: 10000;
+  z-index: 100;
 }
 
 header .navbar-item {
@@ -36,7 +36,7 @@ header .picer-data-antd {
 header .searchbox {
   width: 61px;
   height: 61px;
-  background-color: #f7f7f7;
+  background-color: var(--light-gray);
   border-radius: 15px;
   display: flex;
   align-items: center;
