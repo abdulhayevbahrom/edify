@@ -10,7 +10,7 @@ import { FiSearch } from "react-icons/fi";
 
 function Navbar() {
   const [showInput, setShowInput] = useState(false); // Input ochilganligini boshqarish
-  const [searchValue, setSearchValue] = useState(""); 
+  const [searchValue, setSearchValue] = useState("");
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -28,51 +28,6 @@ function Navbar() {
   };
 
   return (
-<<<<<<< HEAD
-    <header>
-      <div className="navbar-item">
-        <div className="nav-item_left">
-          <img src={studentsIcon} alt="" />
-        </div>
-        <div className="nav-item_right">
-          <h4>O’quvchilar soni</h4>
-          <p>
-            {116}
-
-            <span>ta</span>
-          </p>
-        </div>
-      </div>
-      <div className="navbar-item">
-        <div className="nav-item_left">
-          <img src={groupsIcon} alt="" />
-        </div>
-        <div className="nav-item_right">
-          <h4>Guruhilar soni</h4>
-          <p>
-            {116}
-
-            <span>ta</span>
-          </p>
-        </div>
-      </div>
-      <div className="navbar-item">
-        <div className="nav-item_left">
-          <img src={paymentIcon} alt="" />
-        </div>
-        <div className="nav-item_right">
-          <h4>To’lov qilmaganlar soni</h4>
-          <p>
-            {116}
-
-            <span>ta</span>
-          </p>
-        </div>
-      </div>
-      <div className="picer-data-antd">
-        <PickerData />
-      </div>
-=======
     <header className={`navbar ${showInput ? "input-active" : ""}`}>
       {!showInput && (
         <>
@@ -109,11 +64,10 @@ function Navbar() {
         </>
       )}
 
->>>>>>> origin/asqarjon
       <div className="searchbox">
         {showInput ? (
           <div className="search-input" ref={inputRef}>
-          <FiSearch />
+            <FiSearch />
             <input
               type="text"
               className="full-width-input"
@@ -122,17 +76,14 @@ function Navbar() {
               onChange={(e) => setSearchValue(e.target.value)}
             />
             {searchValue && (
-              <IoClose
-                className="clear-icon"
-                onClick={clearInput}
-              />
+              <IoClose className="clear-icon" onClick={clearInput} />
             )}
           </div>
         ) : (
           <FiSearch
             className="header-search"
-            onClick={() => setShowInput(true)} 
-                    />
+            onClick={() => setShowInput(true)}
+          />
         )}
       </div>
     </header>
