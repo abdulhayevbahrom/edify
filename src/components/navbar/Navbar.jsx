@@ -3,9 +3,8 @@ import "./Navbar.css";
 import studentsIcon from "../../assets/navbar/students.svg";
 import groupsIcon from "../../assets/navbar/groups.svg";
 import paymentIcon from "../../assets/navbar/Regular-S.svg";
-import serachIcon from "../../assets/navbar/search.svg";
 import PickerData from "../antd/DataPicker";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoSearch } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 
 function Navbar() {
@@ -37,7 +36,10 @@ function Navbar() {
             </div>
             <div className="nav-item_right">
               <h4>O’quvchilar soni</h4>
-              <span>116 ta</span>
+              <p>
+                {116}
+                <span>ta</span>
+              </p>
             </div>
           </div>
           <div className="navbar-item">
@@ -46,7 +48,10 @@ function Navbar() {
             </div>
             <div className="nav-item_right">
               <h4>Guruhilar soni</h4>
-              <span>8 ta</span>
+              <p>
+                {116}
+                <span>ta</span>
+              </p>
             </div>
           </div>
           <div className="navbar-item">
@@ -55,7 +60,10 @@ function Navbar() {
             </div>
             <div className="nav-item_right">
               <h4>To’lov qilmaganlar soni</h4>
-              <span>3 ta</span>
+              <p>
+                {116}
+                <span>ta</span>
+              </p>
             </div>
           </div>
           <div className="picer-data-antd">
@@ -64,7 +72,7 @@ function Navbar() {
         </>
       )}
 
-      <div className="searchbox">
+      <div className="searchbox" onClick={() => setShowInput(true)}>
         {showInput ? (
           <div className="search-input" ref={inputRef}>
             <FiSearch />
@@ -80,10 +88,7 @@ function Navbar() {
             )}
           </div>
         ) : (
-          <FiSearch
-            className="header-search"
-            onClick={() => setShowInput(true)}
-          />
+          <IoSearch className="header-search" />
         )}
       </div>
     </header>

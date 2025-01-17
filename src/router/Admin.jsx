@@ -6,6 +6,7 @@ import Payments from "../router/payment/Payment";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "../components/dashboard/Dashboard";
 import Teacher from "../components/Students/Teacher";
+import StudentsMain from "../components/studentsMain/StudentsMain";
 
 function Admin() {
   return (
@@ -18,6 +19,7 @@ function Admin() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/teachers" element={<Teacher />} />
             <Route path="/payments" element={<Payments />} />
+            <Route path="/students" element={<StudentsMain />} />
           </Routes>
         </div>
       </div>

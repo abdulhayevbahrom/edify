@@ -5,7 +5,7 @@ import logo from "../../assets/main/logo.svg";
 import { BsGrid } from "react-icons/bs";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import { LiaGraduationCapSolid } from "react-icons/lia";
-import { PiGridNine, PiGridNineFill } from "react-icons/pi";
+import { PiGridNine, PiGridNineFill, PiStudent } from "react-icons/pi";
 import { LuSettings } from "react-icons/lu";
 
 function Sidebar() {
@@ -25,6 +25,11 @@ function Sidebar() {
       linkName: "O'qituvchilar",
       link: "/teachers",
       icon: <LiaGraduationCapSolid />,
+    },
+    {
+      linkName: "O'quvchilar",
+      link: "/students",
+      icon: <PiStudent />,
     },
     {
       linkName: "Dars jadvali",
@@ -63,6 +68,11 @@ function Sidebar() {
             <p>{link.linkName}</p>
           </NavLink>
         ))}
+      </div>
+      <div className="sidebar-foter">
+        <span>
+          © 2022 All rights reserved! <br /> Made by Edify Team
+        </span>
       </div>
     </div>
   );
