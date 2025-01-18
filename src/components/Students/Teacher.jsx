@@ -24,6 +24,7 @@ function Teacher() {
         </Tabs.TabPane>
         <Tabs.TabPane tab="Xabarlar" key="5">
           <h1>Xabarlar</h1>
+          
         </Tabs.TabPane>
       </Tabs>
     </div>
