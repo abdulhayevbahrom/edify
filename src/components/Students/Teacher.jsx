@@ -6,7 +6,10 @@ import PersonalPage from "./PersonalPage/PersonalPage";
 import ListTeacher from "./listTeacher/ListTeacher";
 
 function Teacher() {
+  console.log("ok");
+  
   return (
+    
     <div className="teacher">
       <h1>O’qituvchilar</h1>
       <Tabs defaultActiveKey="1">
@@ -24,7 +27,7 @@ function Teacher() {
         </Tabs.TabPane>
         <Tabs.TabPane tab="Xabarlar" key="5">
           <h1>Xabarlar</h1>
-          
+
         </Tabs.TabPane>
       </Tabs>
     </div>
