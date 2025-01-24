@@ -7,7 +7,7 @@ import PickerData from "../../antd/DataPicker";
 function AddStudent() {
     return (
         <div className='AddStudent'>
-            <div className="add_student_box">
+            <form className="add_student_box">
                 <div className="left_form">
                     <div className="input">
                         <label>O’quvchi ism va familiyasi</label>
@@ -26,7 +26,7 @@ function AddStudent() {
                         <div className="input">
                             <label>O’quvchi tug'ilgan sani</label>
                             <div className="student_bithday-shtxr_data">
-                             <PickerData />
+                             <PickerData className="student_date" />
                             </div>
                         </div>
                         <div className="input">
@@ -50,7 +50,7 @@ function AddStudent() {
                     </div>
                     <button>Qo'shish</button>
                 </div>
-            </div>
+            </form>
         </div>
     )
 }

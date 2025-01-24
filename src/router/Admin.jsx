@@ -8,6 +8,7 @@ import Dashboard from "../components/dashboard/Dashboard";
 import Teacher from "../components/Students/Teacher";
 import StudentsMain from "../components/studentsMain/StudentsMain";
 
+
 function Admin() {
   return (
     <div className="admin">
