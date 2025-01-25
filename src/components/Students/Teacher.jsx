@@ -4,6 +4,7 @@ import { Tabs } from "antd";
 import AddTeacher from "./addTeacher/AddTeacher";
 import PersonalPage from "./PersonalPage/PersonalPage";
 import ListTeacher from "./listTeacher/ListTeacher";
+import Messages from "./messages/Messages";
 
 function Teacher() {
   return (
@@ -23,11 +24,11 @@ function Teacher() {
           <ListTeacher />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Xabarlar" key="5">
-          <h1>Xabarlar</h1>
+          <Messages />
         </Tabs.TabPane>
       </Tabs>
     </div>
   );
-} 
+}
 
 export default Teacher;

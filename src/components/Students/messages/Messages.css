@@ -1,0 +1,139 @@
+.messages-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: var(--box-shadow);
+
+  .messages-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+
+    textarea {
+      min-width: 80%;
+      min-height: 217px;
+      border-radius: 15px;
+      border: none;
+      outline: none;
+      background-color: var(--light-gray);
+      resize: none;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 36px;
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    button {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 400;
+      color: #fff;
+      background-color: var(--main-color);
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      padding: 10px 20px;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: #da0707;
+      }
+
+      &:active {
+        transform: scale(0.99);
+      }
+    }
+  }
+
+  .messages-right {
+    width: 50%;
+    height: 536px;
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    padding: 10px;
+    overflow: hidden;
+
+    .msg-right-title {
+      p {
+        width: 100%;
+        text-align: left;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 48px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .messages-all {
+      width: 100%;
+      height: 86%;
+      display: flex;
+      padding: 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+      overflow: auto;
+
+      .msg-all-item {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 0 10px #00000029;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+
+        .all-item-top {
+          margin-bottom: 5px;
+          p {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 400;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+
+          span {
+            font-size: 20px;
+            color: var(--tooltip-hover);
+            margin-left: 8px;
+            cursor: pointer;
+          }
+        }
+
+        button {
+          background-color: var(--main-color);
+          color: #fff;
+          border: none;
+          outline: none;
+          border-radius: 10px;
+          padding: 2px 10px;
+          cursor: pointer;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 36px;
+          position: absolute;
+          bottom: 10px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}

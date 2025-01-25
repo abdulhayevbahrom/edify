@@ -1,8 +1,8 @@
 .sidebar {
   width: 306px;
-  height: 100%;
   border-radius: 25px;
   padding: 50px 25px;
+  background-color: #fff;
   box-shadow: 0 0 10px #c3c3c3;
 }
 
@@ -108,6 +108,7 @@
   margin: 20px 5px;
 
   span {
+    width: 100%;
     text-align: center;
     font-size: 15px;
     color: #776e6e;
