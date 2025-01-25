@@ -7,7 +7,10 @@ import ListTeacher from "./listTeacher/ListTeacher";
 import Messages from "./messages/Messages";
 
 function Teacher() {
+  console.log("ok");
+  
   return (
+    
     <div className="teacher">
       <h1>O’qituvchilar</h1>
       <Tabs defaultActiveKey="1">
@@ -24,7 +27,12 @@ function Teacher() {
           <ListTeacher />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Xabarlar" key="5">
+<<<<<<< HEAD
           <Messages />
+=======
+          <h1>Xabarlar</h1>
+
+>>>>>>> d161bf3885f32a94c9e769811d08cfe26f15e3a6
         </Tabs.TabPane>
       </Tabs>
     </div>

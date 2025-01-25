@@ -1,6 +1,7 @@
 import React from "react";
 import "./StudentsMain.css";
 import { Tabs } from "antd";
+import AddStudent from "./addStudent/AddStudent";
 
 function StudentsMain() {
   return (
@@ -8,7 +9,7 @@ function StudentsMain() {
       <h1>O’quvchilar</h1>
       <Tabs defaultActiveKey="1">
         <Tabs.TabPane tab="O'quvchi qo'shish" key="1">
-          <h1>o'quvchi qo'shish</h1>
+          <AddStudent />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Yangi guruh yaratish" key="2">
           <h1>Guruhlar</h1>
