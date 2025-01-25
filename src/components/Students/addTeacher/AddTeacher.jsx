@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { FiX } from "react-icons/fi";
 import axios from "../../../api";
+import { message } from "antd";
 
 function AddTeacher() {
   const [phoneValue, setPhoneValue] = useState([]);
@@ -33,10 +34,26 @@ function AddTeacher() {
         },
       })
       .then((res) => {
-        console.log(res);
+        message.success(res.data.message);
+        setData({
+          fullname: "",
+          phone: phoneValue,
+          address: "",
+          login: "",
+          password: "",
+          socialNetworks: {
+            facebook: "",
+            instagram: "",
+            telegram: "",
+            tiktok: "",
+            youtube: "",
+          },
+          specialty: "",
+          salary: 0,
+        });
       })
       .catch((err) => {
-        console.log(err);
+        message.error(err.response.data.innerData);
       });
   };
 
