@@ -5,6 +5,8 @@ import AddTeacher from "./addTeacher/AddTeacher";
 import PersonalPage from "./PersonalPage/PersonalPage";
 import ListTeacher from "./listTeacher/ListTeacher";
 
+
+
 function Teacher() {
   return (
     <div className="teacher">
