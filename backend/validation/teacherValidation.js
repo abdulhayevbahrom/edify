@@ -29,7 +29,7 @@ const teacherValidation = (req, res, next) => {
       salary: { type: "number", minimum: 0 },
     },
     required: ["fullname", "phone", "login", "password", "address", "specialty", "salary"],
-    additionalProperties: false,
+    additionalProperties: false, 
     errorMessage: {
       required: {
         fullname: "Fullname is required",
@@ -62,3 +62,5 @@ const teacherValidation = (req, res, next) => {
 };
 
 module.exports = teacherValidation;
+
+

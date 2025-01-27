@@ -37,7 +37,7 @@ class response {
             status: false,
             message,
             innerData: data,
-            });
+            });                                                      
     }
 }
 module.exports = new response();
