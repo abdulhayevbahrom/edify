@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-
+import { message } from "antd";
 import { FiX } from "react-icons/fi";
 import axios from "../../../api";
-import { message } from "antd";
 
 function AddTeacher() {
   const [phoneValue, setPhoneValue] = useState([]);
