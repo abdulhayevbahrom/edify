@@ -36,7 +36,7 @@ function AddTeacher() {
         message.success(res.data.message);
         setData({
           fullname: "",
-          phone: phoneValue,
+          phone: "",
           address: "",
           login: "",
           password: "",
