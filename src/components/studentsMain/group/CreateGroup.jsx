@@ -4,7 +4,9 @@ import "./CreateGroup.css"
 
 function CreateGroup() {
     return (
+        
         <div className='CreateGroup'>
+            console.log("ok");
             <form>
                 <div className="group_teacher">
                     <label>Guruh mutaxasisligi </label>
