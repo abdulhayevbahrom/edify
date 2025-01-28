@@ -5,6 +5,7 @@ import AddTeacher from "./addTeacher/AddTeacher";
 import PersonalPage from "./PersonalPage/PersonalPage";
 import ListTeacher from "./listTeacher/ListTeacher";
 import Messages from "./messages/Messages";
+import Groups from "../groups/Groups";
 
 function Teacher() {
   console.log("ok");
@@ -17,7 +18,7 @@ function Teacher() {
           <AddTeacher />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Guruhlar" key="2">
-          <h1>Guruhlar</h1>
+          <Groups />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Shaxsiy malumotlar" key="3">
           <PersonalPage />

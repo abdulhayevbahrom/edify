@@ -2,6 +2,7 @@ import React from "react";
 import "./StudentsMain.css";
 import { Tabs } from "antd";
 import AddStudent from "./addStudent/AddStudent";
+import CreateGroup from "./group/CreateGroup"
 
 function StudentsMain() {
   return (
@@ -12,7 +13,7 @@ function StudentsMain() {
           <AddStudent />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Yangi guruh yaratish" key="2">
-          <h1>Guruhlar</h1>
+          <CreateGroup />
         </Tabs.TabPane>
         <Tabs.TabPane tab="Shaxsiy malumotlar" key="3">
           <h1>shaxshiy malumotlar</h1>

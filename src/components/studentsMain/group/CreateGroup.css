@@ -1,0 +1,65 @@
+.CreateGroup{
+    width: 100%;
+    padding: 30px 70px;
+    border-radius: 25px;
+    display: flex;
+    box-shadow: 0 0 10px #c3c3c3;
+
+}
+
+.CreateGroup form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.CreateGroup .group_teacher input{
+    width: 505px;
+    height: 55px;    
+}
+
+
+.CreateGroup .group_time{
+    display: flex;
+    gap: 43px;
+}
+.group_teacher,
+.CreateGroup .group_time_start,
+.CreateGroup .group_time_end,
+.group_room_number{
+    display: flex;
+    flex-direction: column;
+}
+
+.CreateGroup label {
+    font-size: 20px;
+    font-weight: 550;
+    line-height: 30px;
+    text-align: left;
+
+}
+
+.CreateGroup input {
+    padding: 17px 10px;
+    border-radius: 15px;
+    background-color: var(--light-gray);
+    text-indent: 20px;
+    font-size: 16px;
+}
+
+.group_room_number{
+    width: 321px;
+}
+
+.CreateGroup button{
+    width: 196px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: var(--main-color);
+    border-radius: 12px;
+    color: var(--light-gray);
+    margin-left: 170px;
+
+}
