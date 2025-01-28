@@ -11,7 +11,9 @@ import StudentsMain from "../components/studentsMain/StudentsMain";
 function Admin() {
   return (
     <div className="admin">
-      <Sidebar />
+      <div className="admin_sidebar">
+        <Sidebar />
+      </div>
       <div className="admin-right">
         <Navbar />
         <div className="admin_content">

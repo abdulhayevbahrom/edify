@@ -1,9 +1,11 @@
 .sidebar {
   width: 306px;
+  height: 95%;
   border-radius: 25px;
   padding: 50px 25px;
   background-color: #fff;
   box-shadow: 0 0 10px #c3c3c3;
+  position: fixed;
 }
 
 .sidebar .sidebar-logo {

@@ -6,6 +6,11 @@
   gap: 30px;
 }
 
+.admin_sidebar {
+  width: 300px;
+  height: 100vh;
+}
+
 .admin-right {
   width: calc(100% - 306px);
   display: flex;

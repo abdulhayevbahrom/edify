@@ -64,9 +64,10 @@ border: 2px solid var(--main-color);
     width: 85%;
 }
 
-.student_bithday-shtxr_data:focus{
-    border: none;
+.student_date:focus{
+    border: none !important;
 }
+
 
 .right_form {
     width: 50%;
