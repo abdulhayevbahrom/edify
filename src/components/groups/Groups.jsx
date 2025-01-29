@@ -4,7 +4,6 @@ import axios from "../../api";
 
 function Groups() {
   const [groups, setGroups] = useState([]);
-  console.log(groups);
 
   useEffect(() => {
     axios
