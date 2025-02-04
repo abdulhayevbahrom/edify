@@ -1,0 +1,92 @@
+.Profile {
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.Profile_box {
+    width: 100%;
+    display: flex;
+}
+
+.Profile_box .user_img {
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.user_img img {
+    width: 110px;
+    height: 110px;
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+}
+
+.user_img h2 {
+    color: var(--text-black);
+    font-size: 30px;
+}
+
+.user_img p {
+    color: var(--main-dark);
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.user_img button {
+    padding: 12px 18px;
+    box-shadow: var(--box-shadow);
+    color: var(--tooltip-hover);
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.user_about {
+    width: 100%;
+    padding: 0 20px;
+}
+
+table td {
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-dark);
+    padding-right: 25px;
+}
+
+.Main_td {
+    padding-bottom: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--text-black);
+
+}
+
+.Edit_btn {
+    padding: 12px 18px;
+    background: var(--tooltip-hover);
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.Profile_social-media {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    a {
+        font-size: 17px;
+        font-weight: 500;
+        color: var(--tooltip-hover);
+    }
+
+}
