@@ -17,7 +17,6 @@ function ListTeacher({ handleTeacherClick }) {
       })
       .then((res) => {
         setData(res.data.innerData);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);

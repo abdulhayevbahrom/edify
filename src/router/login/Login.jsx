@@ -15,6 +15,7 @@ function Login() {
       .then((res) => {
         if (res.data.state) {
           localStorage.setItem("token", res.data.innerData.token);
+          localStorage.setItem("user", res.data.innerData.user);
           navigate("/");
         }
       })
