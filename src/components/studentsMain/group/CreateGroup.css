@@ -14,7 +14,7 @@
   gap: 30px;
 }
 
-.CreateGroup .group_teacher input {
+.CreateGroup .group_teacher input,select {
   width: 505px;
   height: 55px;
 }
@@ -38,11 +38,11 @@
   text-align: left;
 }
 
-.CreateGroup input {
+.CreateGroup input,select {
   padding: 17px 10px;
   border-radius: 15px;
   background-color: var(--light-gray);
-  text-indent: 20px;
+  text-indent: 15px;
   font-size: 16px;
 }
 
@@ -58,5 +58,5 @@
   background-color: var(--main-color);
   border-radius: 12px;
   color: var(--light-gray);
-  margin-left: 170px;
+  margin-left: 177px;
 }

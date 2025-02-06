@@ -10,55 +10,43 @@ function Messages() {
   const [messages, setMessages] = useState([]);
 
   const sendTextToServer = () => {
-    if (text.trim() === "") {
-      return message.warning("Xabar kiriting");
-    }
+    if (text.trim() === "") return message.warning("Xabar kiriting");
+
     let data = {
       message: text,
       sender: "Direktor",
     };
-    socket.emit("sendMessage", data);
-    setText("");
 
-    // axios
-    //   .post("/message/create", data, {
-    //     headers: {
-    //       Authorization: `Bearer ${localStorage.getItem("token")}`,
-    //     },
-    //   })
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => console.log(err))
-    //   .finally(() => setText(""));
+    axios
+      .post("/message/create", data, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => res.data.state && message.success(res.data.message))
+      .catch((err) => message.error(err.response.data.message))
+      .finally(() => setText(""));
   };
 
   // get message
-  // useEffect(() => {
-  //   axios
-  //     .get("/message/all", {
-  //       headers: {
-  //         Authorization: `Bearer ${localStorage.getItem("token")}`,
-  //       },
-  //     })
-  //     .then((res) => setMessages(res.data.innerData))
-  //     .catch((err) => console.log(err));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("/message/all", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => setMessages(res.data.innerData))
+      .catch((err) => console.log(err));
+  }, []);
 
   useEffect(() => {
-    // Oldingi xabarlarni olish
-    socket.on("messageHistory", (msgs) => {
-      setMessages(msgs);
-    });
-
     // Yangi xabarni olish
-    socket.on("receiveMessage", (data) => {
-      setMessages((prev) => [...prev, data]);
+    socket.on("new_message", (data) => {
+      setMessages((oldingi_data) => [...oldingi_data, data]);
     });
-
     return () => {
-      socket.off("messageHistory");
-      socket.off("receiveMessage");
+      socket.off("new_message");
     };
   }, []);
 
