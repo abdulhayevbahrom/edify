@@ -15,6 +15,8 @@ function Profile({ handleProfileClick }) {
   const teacherName = "";
   const teacher_result = getInitials(teacherName);
 
+  console.log(teacherName);
+
   useEffect(() => {
     axios
       .get("/teacher/all", {
