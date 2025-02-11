@@ -17,7 +17,6 @@ function ListTeacher({ handleTeacherClick }) {
       })
       .then((res) => {
         setData(res.data.innerData);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -34,7 +33,10 @@ function ListTeacher({ handleTeacherClick }) {
       <div className="ListTeacher_box">
         {data.map((item, index) => (
           <div key={index} className="ListTeacher_item">
-            <h1>{getInitials(item.fullname)}</h1>
+            {/* <h1>{getInitials(item.fullname)}</h1> */}
+            <h1>
+              <img src={item?.image} alt="" />
+            </h1>
             <p className="ListTeacher_science">{item.specialty}</p>
             <h4 className="ListTeacher_name">{item.fullname}</h4>
             <div className="ListTeacher_money">

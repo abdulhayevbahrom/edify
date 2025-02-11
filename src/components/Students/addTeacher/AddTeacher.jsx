@@ -22,13 +22,25 @@ function AddTeacher() {
     specialty: "",
     salary: 0,
   });
+  const [file, setFile] = useState(null);
 
   const registerTeacher = () => {
     console.log(data);
+    let formData = new FormData();
+    formData.append("image", file);
+    formData.append("fullname", data.fullname);
+    formData.append("phone", JSON.stringify(data.phone));
+    formData.append("address", data.address);
+    formData.append("login", data.login);
+    formData.append("password", data.password);
+    formData.append("specialty", data.specialty);
+    formData.append("salary", data.salary);
+    formData.append("socialNetworks", JSON.stringify(data.socialNetworks));
+
     axios
-      .post("/teacher/create", data, {
+      .post("/teacher/create", formData, {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
@@ -50,6 +62,7 @@ function AddTeacher() {
           specialty: "",
           salary: 0,
         });
+        setFile(null);
       })
       .catch((err) => {
         message.error(err.response.data.innerData);
@@ -104,6 +117,14 @@ function AddTeacher() {
           <input
             type="text"
             onChange={(e) => setData({ ...data, address: e.target.value })}
+          />
+        </div>
+        <div className="input">
+          <label>Profile</label>
+          <input
+            accept="image/*"
+            type="file"
+            onChange={(e) => setFile(e.target.files[0])}
           />
         </div>
       </div>

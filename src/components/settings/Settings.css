@@ -1,0 +1,54 @@
+.Settings {
+    width: 100%;
+
+    h1 {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 72px;
+        color: var(--text-black);
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+}
+
+.settings_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.settings_box .settings_item img {
+    width: 434px;
+    height: 247px;
+}
+
+
+.settings_item button {
+    width: 200px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--light-gray);
+    color: var(--text-black)
+}
+
+.settings_item .tonight {
+    width: 200px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-left: 117px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--text-black);
+    color: var(--light-gray)
+}
