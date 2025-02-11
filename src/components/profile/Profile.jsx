@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import "./Profile.css";
 import { Link } from "react-router-dom";
@@ -9,12 +10,17 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import axios from "../../api";
+=======
+import React, {useState, useEffect} from 'react';
+import "./Profile.css";
+import { Link } from 'react-router-dom';
+import { FaTelegram, FaInstagram, FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa";
+>>>>>>> origin/asqarjon
 
 function Profile({ handleProfileClick }) {
-  const [data, setData] = useState([]);
-  const teacherName = "";
-  const teacher_result = getInitials(teacherName);
+  const [user, setUser] = useState(null );
 
+<<<<<<< HEAD
   console.log(teacherName);
 
   useEffect(() => {
@@ -42,21 +48,63 @@ function Profile({ handleProfileClick }) {
     <div className="Profile">
       <div className="Profile_box">
         {data.map((item, index) => {
+=======
+  useEffect(() => {
+    try {
+      const storedUser = localStorage.getItem("user");
+      if (storedUser) {
+        const parsedUser = JSON.parse(storedUser);
+        if (parsedUser && parsedUser.fullname) {
+          setUser(parsedUser);
+        } else {
+         console.error("error");
+          setUser(null);
+        }
+      } else {
+        setUser(null);
+      }
+    } catch (error) {
+      console.error(">>>", error);
+      setUser(null);
+    }
+  }, []);
+
+// const user = {
+//   fullname: "Ali Valiyev",
+//   specialty: "Dasturchi",
+//   phone: "+998901234567",
+//   address: "Toshkent, Uzbekistan",
+// };
+
+// localStorage.setItem("user", JSON.stringify(user));
+
+
+
+  return (
+    <div className='Profile'>
+      {user ? (
+        <div className="Profile_box">
+>>>>>>> origin/asqarjon
           <div className="user_img">
-            <img src="" alt="" />
-            <h2>{item.fullname}</h2>
-            <p>{item.specialty}</p>
-            <p>{item.address}</p>
+            <img src={user.image}  alt="" />
+            <h2>{user.fullname}</h2>
+            <p>{user.specialty}</p>
+            <p>{user.address}</p>
             <button>Xabar jo'natish</button>
+<<<<<<< HEAD
           </div>;
         })}
 
         {data.map((item, index) => {
+=======
+          </div>
+>>>>>>> origin/asqarjon
           <div className="user_about">
             <table>
               <tbody>
                 <tr>
                   <td>Ism familyasi</td>
+<<<<<<< HEAD
                   <td className="Main_td">{item.fullname}</td>
                 </tr>
                 <tr>
@@ -78,11 +126,32 @@ function Profile({ handleProfileClick }) {
                   >
                     taxrirlash
                   </button>
+=======
+                  <td className='Main_td'>{user.fullname}</td>
+                </tr>
+                <tr>
+                  <td>Mutaxassisligi</td>
+                  <td className='Main_td'>{user.specialty}</td>
+                </tr>
+                <tr>
+                  <td>Tel raqami</td>
+                  <td className='Main_td'>{user.phone}</td>
+                </tr>
+                <tr>
+                  <td>Manzili</td>
+                  <td className='Main_td'>{user.address}</td>
+                </tr>
+                <tr>
+                  <td colSpan="2">
+                    <button onClick={handleProfileClick} className='Edit_btn'>Taxrirlash</button>
+                  </td>
+>>>>>>> origin/asqarjon
                 </tr>
               </tbody>
             </table>
 
             <div className="Profile_social-media">
+<<<<<<< HEAD
               <Link to="telegram">
                 <FaTelegram /> Telegram
               </Link>
@@ -102,6 +171,19 @@ function Profile({ handleProfileClick }) {
           </div>;
         })}
       </div>
+=======
+              <Link to="telegram"><FaTelegram /> Telegram</Link>
+              <Link to="instagram"><FaInstagram /> Instagram</Link>
+              <Link to="facebook"><FaFacebook /> Facebook</Link>
+              <Link to="tiktok"><FaTiktok /> TikTok</Link>
+              <Link to="youtube"><FaYoutube /> YouTube</Link>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <p>User topilmadi</p>
+      )}
+>>>>>>> origin/asqarjon
     </div>
   );
 }
