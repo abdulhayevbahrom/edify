@@ -29,6 +29,7 @@
 .user_img h2 {
     color: var(--text-black);
     font-size: 30px;
+    text-align: center;
 }
 
 .user_img p {

@@ -13,8 +13,11 @@ function Login() {
     axios
       .post("/edu/login", data)
       .then((res) => {
+        console.log(res.data);
+
         if (res.data.state) {
           localStorage.setItem("token", res.data.innerData.token);
+          localStorage.setItem("user", JSON.stringify(res.data.innerData.edu));
           navigate("/");
         }
       })

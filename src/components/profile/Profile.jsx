@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Profile.css";
 import { Link } from "react-router-dom";
 import {
@@ -8,76 +8,47 @@ import {
   FaTiktok,
   FaYoutube,
 } from "react-icons/fa";
-import axios from "../../api";
 
 function Profile({ handleProfileClick }) {
-  const [data, setData] = useState([]);
-  const teacherName = "";
-  const teacher_result = getInitials(teacherName);
-
-  console.log(teacherName);
-
-  useEffect(() => {
-    axios
-      .get("/teacher/all", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
-      .then((res) => {
-        setData(res.data.innerData);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
-  function getInitials(name) {
-    const words = name.split(" ");
-    return words.map((word) => word.charAt(0).toUpperCase()).join("");
-  }
+  let edu = JSON.parse(localStorage.getItem("user"));
+  console.log(edu);
 
   return (
     <div className="Profile">
-      <div className="Profile_box">
-        {data.map((item, index) => {
+      {edu ? (
+        <div className="Profile_box">
           <div className="user_img">
-            <img src="" alt="" />
-            <h2>{item.fullname}</h2>
-            <p>{item.specialty}</p>
-            <p>{item.address}</p>
+            <img src={edu.image} alt="" />
+            <h2>{edu.name}</h2>
+            <p>{edu.specialty}</p>
+            <p>{edu.address}</p>
             <button>Xabar jo'natish</button>
-          </div>;
-        })}
-
-        {data.map((item, index) => {
+          </div>
           <div className="user_about">
             <table>
               <tbody>
                 <tr>
                   <td>Ism familyasi</td>
-                  <td className="Main_td">{item.fullname}</td>
+                  <td className="Main_td">{edu.fullname}</td>
                 </tr>
                 <tr>
-                  <td>mutaxasisligi</td>
-                  <td className="Main_td">{item.specialty}</td>
+                  <td>Mutaxassisligi</td>
+                  <td className="Main_td">{edu.specialty}</td>
                 </tr>
                 <tr>
                   <td>Tel raqami</td>
-                  <td className="Main_td">{item.phone}</td>
+                  <td className="Main_td">{edu.phone}</td>
                 </tr>
                 <tr>
                   <td>Manzili</td>
-                  <td className="Main_td">{item.address}</td>
+                  <td className="Main_td">{edu.address}</td>
                 </tr>
                 <tr>
-                  <button
-                    onClick={() => handleProfileClick(console.log("ok"))}
-                    className="Edit_btn"
-                  >
-                    taxrirlash
-                  </button>
+                  <td colSpan="2">
+                    <button onClick={handleProfileClick} className="Edit_btn">
+                      Taxrirlash
+                    </button>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -92,16 +63,18 @@ function Profile({ handleProfileClick }) {
               <Link to="facebook">
                 <FaFacebook /> Facebook
               </Link>
-              <Link to="tik tok">
-                <FaTiktok /> Tiktok
+              <Link to="tiktok">
+                <FaTiktok /> TikTok
               </Link>
-              <Link to="youtobe">
-                <FaYoutube /> Youtobe
+              <Link to="youtube">
+                <FaYoutube /> YouTube
               </Link>
             </div>
-          </div>;
-        })}
-      </div>
+          </div>
+        </div>
+      ) : (
+        <p>User topilmadi</p>
+      )}
     </div>
   );
 }

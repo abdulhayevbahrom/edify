@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./AddStudent.css";
+import { message, Alert, Select } from "antd";
+import axios from "../../../api";
 import PickerData from "../../antd/DataPicker";
 
 function AddStudent() {
+  const [groups, setGroups] = useState([]);
+  const [errorText, setErrorText] = useState(false);
+  useEffect(() => {
+    axios
+      .get("/group/all", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      })
+      .then((res) => setGroups(res.data.innerData))
+      .catch((err) => {
+        setErrorText(err.response.data.message);
+        message.error(err.response.data.message);
+      });
+  }, []);
+  console.log(groups);
+
+  const selectData = groups.map((g) => g && { label: g.name, value: g._id });
+
   return (
     <div className="AddStudent">
+      {errorText ? (
+        <Alert
+          style={{ marginBottom: "20px" }}
+          message={errorText}
+          type="error"
+        />
+      ) : (
+        <></>
+      )}
       <div className="add_student_box">
         <div className="left_form">
           <div className="input">
@@ -40,7 +70,8 @@ function AddStudent() {
         <div className="right_form">
           <div className="input">
             <label>O’quvchi guruhi </label>
-            <input type="number" placeholder="" />
+            {/* <input type="number" placeholder="" /> */}
+            <Select style={{ width: "530px" }} options={selectData} />
           </div>
           <div className="input">
             <label>O’quvchi to'lov summasi </label>

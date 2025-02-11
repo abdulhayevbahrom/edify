@@ -80,9 +80,11 @@ function Messages() {
                 >
                   {msg.message}
                 </p>
-                <span onClick={() => setExpanded(!expanded)}>
-                  {expanded ? "Yopish" : "Batafsil"}
-                </span>
+                {msg?.message?.length > 200 && (
+                  <span onClick={() => setExpanded(!expanded)}>
+                    {expanded ? "Yopish" : "Batafsil"}
+                  </span>
+                )}
               </div>
               <button>O'chirish</button>
             </div>
