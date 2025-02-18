@@ -26,10 +26,10 @@ function Payment() {
           <p></p>
           <div className="unpaid">
             <h5>To'lov qilmaganlar</h5>
-            <div className="unpaid_item">
+            <Link to="/unpayments" className="unpaid_item">
               <h1>19</h1>
               <BsExclamationLg className="unpaid_icon" />
-            </div>
+            </Link>
           </div>
         </div>
         <div className="balance_fine">

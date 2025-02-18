@@ -3,9 +3,11 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+
   align-items: center;
 
   form {
+    flex-direction: column;
     width: 400px;
     padding: 60px 40px;
     border-radius: 15px;

@@ -1,0 +1,101 @@
+.Payment-page {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.Payment-page h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 72px;
+    color: var(--text-black);
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment_right,
+.payment_left {
+    width: 50%;
+    float: left;
+
+}
+
+.student_name,
+.group_name,
+.payment_amount,
+.card_number,
+.payment_day,
+.payment_comment {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ant-select-selector {
+    width: 500px;
+    height: 55px !important;
+    background-color: var(--light-gray) !important;
+    border: none !important;
+    border-radius: 15px !important;
+    font-size: 16px;
+}
+.ant-select-selector:focus {
+    border: 2px solid var(--main-color) !important;
+}
+.payment_day {
+    width: 500px;
+    border-radius: 15px;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.payment_amount {
+    margin-top: 28px;
+}
+
+.ant-picker-outlined {
+    display: flex !important;
+    align-items: center !important;
+    border: none !important;
+    background-color: var(--light-gray) !important;
+}
+
+.ant-picker-input {
+    height: 50px !important;
+}
+
+form label {
+    font-size: 20px;
+    font-weight: 550;
+    line-height: 30px;
+    text-align: left;
+}
+
+.Payment-page input {
+    width: 530px;
+    padding: 17px 0px;
+    border-radius: 15px;
+    background-color: var(--light-gray);
+    text-indent: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.Payment-page input:focus {
+    border: 2px solid var(--main-color);
+}
+
+.Payment-page button {
+    padding: 16px 30px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: var(--main-color);
+    border-radius: 12px;
+    color: var(--light-gray);
+    margin-top: 20px;
+}

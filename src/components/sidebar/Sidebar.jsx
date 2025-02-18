@@ -18,6 +18,11 @@ function Sidebar() {
       icon: <BsGrid />,
     },
     {
+      linkName: "To'lov qilish",
+      link: "/payment-page",
+      icon: <AiOutlineDollarCircle />,
+    },
+    {
       linkName: "To'lovlar",
       link: "/payments",
       icon: <AiOutlineDollarCircle />,

@@ -9,6 +9,8 @@ import Teacher from "../components/Students/Teacher";
 import StudentsMain from "../components/studentsMain/StudentsMain";
 import Settings from "../components/settings/Settings";
 import Profile from "../components/profile/Profile"
+import UnPayments from "../components/payment/unpayment";
+import PaymentPage from "../components/payment-page/Payment-page"
 
 function Admin() {
   return (
@@ -23,9 +25,11 @@ function Admin() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/teachers" element={<Teacher />} />
             <Route path="/payments" element={<Payments />} />
+            <Route path="/unpayments" element={<UnPayments />} />
             <Route path="/students" element={<StudentsMain />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/payment-page" element={<PaymentPage />} />
           </Routes>
         </div>
       </div>
