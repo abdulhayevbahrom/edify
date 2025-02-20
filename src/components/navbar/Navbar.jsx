@@ -4,27 +4,61 @@ import studentsIcon from "../../assets/navbar/students.svg";
 import groupsIcon from "../../assets/navbar/groups.svg";
 import paymentIcon from "../../assets/navbar/Regular-S.svg";
 import PickerData from "../antd/DataPicker";
-import { IoClose, IoSearch } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
+import axios from "../../api";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
-  const [showInput, setShowInput] = useState(false); // Input ochilganligini boshqarish
-  const [searchValue, setSearchValue] = useState("");
+  const [showInput, setShowInput] = useState(false);
+  const [searchResult, setSearchResult] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const inputRef = useRef(null);
+  const navigate = useNavigate();
 
+  // Tashqi bosishlarni kuzatish
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (inputRef.current && !inputRef.current.contains(e.target)) {
-        setShowInput(false);
+      if (
+        inputRef.current &&
+        !inputRef.current.contains(e.target) &&
+        !e.target.closest(".searchResult")
+      ) {
+        setShowInput(false); // Qidiruv panelini yopish
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const clearInput = () => {
-    setSearchValue("");
+  // Qidiruv natijasiga bosganda navigatsiya qilish
+  const clickSearchItem = (id) => {
+    console.log("Navigating to:", "/students/" + id); // Debug uchun log
+    setShowInput(false); // Qidiruv panelini yopish
+    setTimeout(() => navigate("/students/" + id), 0); // Kechiktirib navigatsiya qilish
   };
+
+  // API chaqiruvni debouncing bilan optimallashtirish
+  useEffect(() => {
+    if (!searchTerm) return;
+
+    const debounceTimeout = setTimeout(() => {
+      axios
+        .post(
+          "/students/search",
+          { search: searchTerm },
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        )
+        .then((res) => setSearchResult(res.data.innerData))
+        .catch((err) => console.log(err));
+    }, 300); // 300ms kechiktirish
+
+    return () => clearTimeout(debounceTimeout); // Eski timeoutni tozalash
+  }, [searchTerm]);
 
   return (
     <header className={`navbar ${showInput ? "input-active" : ""}`}>
@@ -74,18 +108,28 @@ function Navbar() {
 
       <div className="searchbox" onClick={() => setShowInput(true)}>
         {showInput ? (
-          <div className="search-input" ref={inputRef}>
-            <FiSearch />
-            <input
-              type="text"
-              className="full-width-input"
-              placeholder="Search"
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
-            />
-            {searchValue && (
-              <IoClose className="clear-icon" onClick={clearInput} />
-            )}
+          <div className="search-input-container">
+            <div className="search-input" ref={inputRef}>
+              <FiSearch />
+              <input
+                type="text"
+                className="full-width-input"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            <div className="searchResult">
+              {searchResult.map((item) => (
+                <p
+                  key={item._id}
+                  className="searchResult-item"
+                  onClick={() => clickSearchItem(item._id)}
+                >
+                  {item.fullname}
+                </p>
+              ))}
+            </div>
           </div>
         ) : (
           <IoSearch className="header-search" />

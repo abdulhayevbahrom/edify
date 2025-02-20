@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Admin.css";
 import Sidebar from "../components/sidebar/Sidebar";
 import Navbar from "../components/navbar/Navbar";
@@ -8,7 +8,7 @@ import Dashboard from "../components/dashboard/Dashboard";
 import Teacher from "../components/Students/Teacher";
 import StudentsMain from "../components/studentsMain/StudentsMain";
 import Settings from "../components/settings/Settings";
-import Profile from "../components/profile/Profile"
+import Profile from "../components/profile/Profile";
 
 function Admin() {
   return (
